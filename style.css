@@ -4,28 +4,19 @@ body {
     background: #f9f5ea;
     margin: 0;
     padding: 0;
+    position: relative;
 }
-.navbar {
+.language-switcher {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: #fff;
-    border-bottom: 1px solid #ccc;
+    gap: 0.5rem;
 }
-.nav-left a {
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 1.2rem;
-    color: #000;
-}
-.nav-links a {
-    margin-right: 1rem;
-    text-decoration: none;
-    color: #000;
-}
-.nav-links select {
-    padding: 0.3rem;
+.language-switcher img {
+    width: 24px;
+    height: auto;
+    cursor: pointer;
 }
 .container {
     max-width: 600px;
