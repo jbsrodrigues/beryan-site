@@ -8,53 +8,29 @@
 </head>
 <body>
   
-<header class="navbar">
-  <div class="nav-left">
-    <a href="/">BERYAN</a>
-  </div>
-  <nav class="nav-links">
-    <a href="/create">Create</a>
-    <select id="language-select" onchange="changeLanguage(this.value)">
-      <option value="en" selected>EN</option>
-      <option value="pt">PT</option>
-    </select>
-  </nav>
-</header>
-<script>
-function changeLanguage(lang) {
-  if (lang === "pt") {
-    window.location.href = "/pt/create";
-  } else {
-    window.location.href = "/create";
-  }
-}
-</script>
+<div class="language-switcher">
+  <a href="/create"><img src="/img/flag-en.png" alt="English"></a>
+  <a href="/pt/create"><img src="/img/flag-pt.png" alt="Português"></a>
+</div>
 
   <div class="container">
     <img src="img/logo.png" alt="BERYAN Logo" class="logo">
     <h1>Create a personalized mug with your child's drawing</h1>
     <p>Upload your child's drawing and we will print it on a mug and deliver it to your home. A special and unique gift.</p>
-
     <form action="mailto:beryan.contact@gmail.com" method="post" enctype="multipart/form-data">
       <label for="parent">Parent's Name:</label>
       <input type="text" id="parent" name="parent" required>
-
       <label for="child">Child's Name:</label>
       <input type="text" id="child" name="child" required>
-
       <label for="drawing">Upload Drawing (JPG or PNG):</label>
       <input type="file" id="drawing" name="drawing" accept=".jpg, .jpeg, .png" required>
-
       <label for="email">Your Email:</label>
       <input type="email" id="email" name="email" required>
-
       <label for="notes">Notes (optional):</label>
       <textarea id="notes" name="notes"></textarea>
-
       <p><strong>Price: 15€</strong></p>
       <p>💳 Pay via MB Way to: <strong>912037133</strong></p>
       <p>You will receive a confirmation email after we receive the payment and the drawing.</p>
-
       <button type="submit">Submit Order</button>
     </form>
   </div>
