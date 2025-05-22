@@ -1,1 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <title>BERYAN Criações - Criar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+  
+<header class="navbar">
+  <div class="nav-left">
+    <a href="/">BERYAN</a>
+  </div>
+  <nav class="nav-links">
+    <a href="/create">Create</a>
+    <select id="language-select" onchange="changeLanguage(this.value)">
+      <option value="en" selected>EN</option>
+      <option value="pt">PT</option>
+    </select>
+  </nav>
+</header>
+<script>
+function changeLanguage(lang) {
+  if (lang === "pt") {
+    window.location.href = "/pt/create";
+  } else {
+    window.location.href = "/create";
+  }
+}
+</script>
 
+  <div class="container">
+    <img src="img/logo.png" alt="Logotipo BERYAN" class="logo">
+    <h1>Transforma o desenho do teu filho numa caneca personalizada</h1>
+    <p>Envia-nos um desenho e nós tratamos do resto — imprimimos numa caneca e entregamos em tua casa.</p>
+
+    <form action="mailto:beryan.contact@gmail.com" method="post" enctype="multipart/form-data">
+      <label for="parent">Nome do Encarregado:</label>
+      <input type="text" id="parent" name="parent" required>
+
+      <label for="child">Nome da Criança:</label>
+      <input type="text" id="child" name="child" required>
+
+      <label for="drawing">Ficheiro do Desenho (JPG ou PNG):</label>
+      <input type="file" id="drawing" name="drawing" accept=".jpg, .jpeg, .png" required>
+
+      <label for="email">O teu Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="notes">Notas adicionais (opcional):</label>
+      <textarea id="notes" name="notes"></textarea>
+
+      <p><strong>Preço: 15€</strong></p>
+      <p>💳 Pagamento via MB Way para: <strong>912037133</strong></p>
+      <p>Receberás um email de confirmação assim que recebermos o desenho e o pagamento.</p>
+
+      <button type="submit">Enviar Pedido</button>
+    </form>
+  </div>
+</body>
+</html>
