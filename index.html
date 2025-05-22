@@ -1,25 +1,38 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
   <title>BERYAN</title>
-  <style>
-    body {
-      margin: 0;
-      background: #f9f5ea;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-    }
-    img {
-      max-width: 300px;
-      height: auto;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <img src="logo.png" alt="BERYAN Logo">
+  <header class="navbar">
+    <div class="nav-left">
+      <a href="/">BERYAN</a>
+    </div>
+    <nav class="nav-links">
+      <a href="/create">Create</a>
+      <select id="language-select" onchange="changeLanguage(this.value)">
+        <option value="en" selected>EN</option>
+        <option value="pt">PT</option>
+      </select>
+    </nav>
+  </header>
+  <div class="container">
+    <img src="create/img/logo.png" alt="BERYAN Logo" class="logo">
+    <h1>Welcome to BERYAN</h1>
+    <p>Where creativity meets family. Start by turning your child's drawing into a beautiful gift.</p>
+    <a href="/create"><button>Start Creating</button></a>
+  </div>
+  <script>
+    function changeLanguage(lang) {
+      if (lang === "pt") {
+        window.location.href = "/pt/create";
+      } else {
+        window.location.href = "/create";
+      }
+    }
+  </script>
 </body>
 </html>
